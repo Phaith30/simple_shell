@@ -2,7 +2,7 @@
 #define shell_H
 
 #define PATH_MAX 4096
-#include <fcntol.h>
+#include <fcntl.h>
 #include <limits.h>
 #include <signal.h>
 #include <stdint.h>
