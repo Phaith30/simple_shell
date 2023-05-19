@@ -46,4 +46,6 @@ int space(char *cmd);
 int execute(char *command, int num_cmd, char *var, char *er_msg, char *exe_name)
 void *_calloc(unsigned int num, unsigned int size);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+char *_strcpy(char *dest, char *src);
+char *_strdup(char *str);
 #endif
