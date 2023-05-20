@@ -44,3 +44,40 @@ char *_strdup(char *str);
 	_strcpy(dup1, str);
 	return (dup1);
 }
+
+/**
+ * _strlen - find the lenght of a string
+ * @s: pointer to the string to check 
+ * Return: void
+ */
+
+int _strlen(const char *s)
+
+{
+	int i = 0;
+	while (s[i])
+		i++;
+
+	return (i);
+}
+
+/**
+ * _strchr - locate a character in a given string
+ * @str: the given string
+ * @c: the given character
+ *
+ * Return : (successs) a pointer to the first occurance of c
+ * if fail return a null pointer
+ */
+ 
+char *_strchr(char *str, char c)
+ {
+	 char *ptr;
+
+	 if (str == NULL)
+		 return (NULL);
+	 for (ptr = str; *ptr; ptr++)
+		 if (*ptr == c)
+			 return (ptr);
+	 return(NULL);
+}
