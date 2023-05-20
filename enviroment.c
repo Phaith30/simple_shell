@@ -16,7 +16,7 @@ void _env(char **com)
 	for (i = 0; j; i++)
 	{
 		write(STDIN_FILENO, S, _strlen(s));
-		write(STDIN_FILENO, "\n" , 1);
+		write(STDIN_FILENO, "\n", 1);
 		s = *(environ + i);
 	}
 }

@@ -9,12 +9,12 @@
  * (fail) negative number will returned
  */
 
-int abort_prg(sh_t *data _atribute_((unused)))
+int abort_prg(sh_t *data _attribute_((unused)))
 {
 	int code, i = 0;
 
-	if (data->args{1] == NULL)
-	{
+	if (data->args[1] == NULL)
+	 {
 		free_data(data);
 		exit(errno);
 	}
@@ -29,4 +29,4 @@ int abort_prg(sh_t *data _atribute_((unused)))
 	code = _atoi(data->args[1]);
 	free_data(data);
 	exit(code);
-}	
+}
