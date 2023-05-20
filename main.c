@@ -6,40 +6,45 @@
 #include <stdlib.h>
 
 /**
- * main - the main function
+ * main - entry point
+ * @ac: arg count
+ * @av: arg vector
  *
- * Return: (success) 0 always
- *  (fail) we drop the looser out
+ * Return: 0 on success, 1 on error
  */
-
 int main(int ac, char **av)
 {
-	ino_t info[] = { INO_INIT };
+	info_t info[] = { INFO_INIT };
 	int fd = 2;
 
-	fd = fd + 3;
+	asm ("mov %1, %0\n\t"
+		"add $3, %0"
+		: "=r" (fd)
+		: "r" (fd));
 
 	if (ac == 2)
 	{
-		fd  = open(av[1], O_RDONLY);
+		fd = open(av[1], 0_RDONLY);
 		if (fd == -1)
 		{
 			if (errno == EACCES)
 				exit(126);
 			if (errno == ENOENT)
 			{
-				puts(av[0]);
-				puts(": 0: Can't open ");
-				puts(av[1]);
-				putchar('\n');
-				putchar(BUF_FLUSH);
+				_eputs(av[0];
+				_eputs(": 0: cant open ");
+				_eputs(av[1]);
+				_eputchar('\n');
+				_eputchar(BUF_FLUSH);
 				exit(127);
+
 			}
 			return (EXIT_FAILURE);
 		}
-		info -> readfd = fd;
+		info->readfd = fd;
 	}
 	populate_env_list(info);
 	read_history(info);
 	hsh(info, av);
 	return (EXIT_SUCCESS);
+}
