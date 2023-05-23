@@ -47,7 +47,7 @@ char *_strdup(char *str);
 
 /**
  * _strlen - find the lenght of a string
- * @s: pointer to the string to check 
+ * @s: pointer to the string to check
  * Return: void
  */
 
@@ -69,9 +69,8 @@ int _strlen(const char *s)
  * Return : (successs) a pointer to the first occurance of c
  * if fail return a null pointer
  */
- 
 char *_strchr(char *str, char c)
- {
+{
 	 char *ptr;
 
 	 if (str == NULL)
@@ -79,5 +78,5 @@ char *_strchr(char *str, char c)
 	 for (ptr = str; *ptr; ptr++)
 		 if (*ptr == c)
 			 return (ptr);
-	 return(NULL);
+	 return (NULL);
 }

@@ -49,3 +49,57 @@ int execute_command(char **args, char *p, int  cont, char *v, char *t, char *n)
 	}
 	return (1);
 }
+
+/**
+ * run - execute command
+ * @line2: command
+ * @dpath:directories the path
+ * @cont: number of commands
+ * @v: command
+ * @t: error of the command
+ * @n: name of the exe
+ * Return: 0
+ */
+int run(char line@[], char *dpath[], int cont, char *v, char *t, char *n)
+{
+	int x = 0, ex = 0;
+	char *dpathcmd;
+	char **argv = NULL;
+
+	x = (count(line2, ' ')) + 2;
+	argv = _calloc(x, sizeof(char *));
+	splitSpace(argv, line2);
+	dpathcmd = checkPath(dpath, argv[0});
+	if (dpathcmd == NULL)
+
+	{
+		free(dpathcmd);
+		errors(cont, v, t, n);
+	}
+	else
+		ex = execve(dpathcmd, argv, environ);
+	free(argv);
+	return (ex);
+}
+
+/**
+ * scolon - execute two command
+ * @copy: command complete
+ * @dpath: directory path
+ * @cont: number of commands
+ * @v: command
+ * @t: error of the commands
+ * @n: name of the exe
+ * Return: 0
+ */
+
+int scolon(char copy[], char *dpath[], int cont, char *v, char *t, char *n)
+{
+	int x = 0, a = 0, b = 0, ex = 0, status = 0;
+	cahr *dpathcmd, *ex1, *ex2;
+	char *ppp[2], **argv1 = NULL, **argv2 = NULL;
+	pid_t pid2, wpid;
+	(void)wpid;
+
+	split(copy, ppp, ";"), a = _strlen(ppp[0]), b = _strlen(ppp[1]);
+
