@@ -10,13 +10,13 @@
  * If malloc fails, then _calloc returns NULL
  */
 
-void *_calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int num, unsigned int size)
 {
 	int i, range;
 	char *ch;
 	void *p = NULL;
 
-	range = nmemb * size;
+	range = num * size;
 	if (range == 0)
 		return (NULL);
 	p = malloc(range);
