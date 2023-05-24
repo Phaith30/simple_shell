@@ -9,7 +9,6 @@
  */
 
 int _myhelp(ino_t *info)
-
 {
 	char **arg_array;
 
@@ -60,7 +59,7 @@ int _mycd(ino_t *info)
 	if (chdir_ret == -1)
 	{
 		print_error(info, "cant cd to");
-		_eputs(info->argv[1}, _eputchar('\n');
+		_eputs(info->argv[1], _eputchar('\n');
 	}
 	else
 	{
