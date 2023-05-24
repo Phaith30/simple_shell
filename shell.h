@@ -36,7 +36,8 @@
 
 #define HIST_FILE	".simple_shell_history"
 #define HIST_MAX	4096
-
+write(STDIN_FILENO, S, _strlen(s));
+write(STDIN_FILENO, "\n", 1);
 extern char **environ;
 
 char *readc(void);
@@ -59,7 +60,11 @@ int is_delim(char c, char *delim);
 int interactive(ino_t *info);
 int _myhelp(ino_t *info);
 int _mycd(ino_t *info);
-
+void _env(char **com);
+int _myenv(ino_t *info);
+int _mysetenv(ino_t *info);
+int _myunsetenv(ino_t *info);
+int populate_env_list(ino_t *info);
 
 void _itoa(int value, char *str, int base);
 char *read_command(void);

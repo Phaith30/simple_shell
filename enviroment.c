@@ -27,7 +27,7 @@ void _env(char **com)
  * to maintain constant function prototype
  * Return: Always 0
  */
-int _myenv(info_t *info)
+int _myenv(ino_t *info)
 {
 	print_list_str(info->env);
 	return (0);
@@ -58,7 +58,7 @@ int _mysetenv(info_t *info)
  * to maintain constant function protoype
  * Return: Always 0
  */
-int _myunsetenv(info_t *info)
+int _myunsetenv(ino_t *info)
 {
 	int i;
 
@@ -79,7 +79,7 @@ int _myunsetenv(info_t *info)
  * to maintain constant function prototype
  * Return: Always 0
  */
-int populate_env_list(info_t *info)
+int populate_env_list(ino_t *info)
 {
 	list_t *node = NULL;
 	size_t i;
