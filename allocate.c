@@ -2,11 +2,11 @@
 
 /**
  * _calloc - a function that allocates memory for an array, using malloc
- * @nmemb: Number of elements.
+ * @num: Number of elements.
  * @size: Bytes of elements.
  * Return: returns a pointer to the allocated memory
  * The memory is set to zero
- * If nmemb or size is 0, then _calloc returns NULL
+ * If num or size is 0, then _calloc returns NULL
  * If malloc fails, then _calloc returns NULL
  */
 
