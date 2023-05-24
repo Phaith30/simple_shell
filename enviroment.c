@@ -35,21 +35,21 @@ int _myenv(info_t *info)
 
 /**
  * _mysetenv - initialize a new environment variable,
- *  or modify an existing one 
+ *  or modify an existing one
  *  @info: Structure containing potential arguments used to maintain
  *     constant function prototype
  * Return: Always 0
  */
 int _mysetenv(info_t *info)
 {
-	if(info->argc != 3)
+	if (info->argc != 3)
 	{
 		_eputs("Incorrect number of arguments\n");
 		return (1);
 	}
 	if (_setenv(info, info->argv[1], info->argv[2])0
 		return (0);
-	returrn (1);
+	return (1);
 }
 
 /**
@@ -84,7 +84,7 @@ int populate_env_list(info_t *info)
 	list_t *node = NULL;
 	size_t i;
 
-	for(i = 0; environ[i]; i++)
+	for (i = 0; environ[i]; i++)
 		add_node_end(&node, environ[i], 0);
 	info->env = node;
 	return (0);
