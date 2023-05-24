@@ -57,8 +57,8 @@ int _atoi(char *s);
 int _isalpha(int c);
 int is_delim(char c, char *delim);
 int interactive(ino_t *info);
-int _myhelp(info_t *info);
-int _mycd(info_t *info);
+int _myhelp(ino_t *info);
+int _mycd(ino_t *info);
 
 
 void _itoa(int value, char *str, int base);
