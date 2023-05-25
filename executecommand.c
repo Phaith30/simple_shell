@@ -101,7 +101,7 @@ int scolon(char copy[], char *dpath[], int cont, char *v, char *t, char *n)
 	pid_t pid2, wpid;
 	(void)wpid;
 
-	split(copy, ppp, ";" ), a = _strlen(ppp[0]), b = _strlen(ppp[1]);
+	split(copy, ppp, " ; " ), a = _strlen(ppp[0]), b = _strlen(ppp[1]);
 	ex1 = _calloc(a, sizeof(char *)), ex2 = _calloc(b, sizeof(char *));
 	_strcpy(ex1, pp[0]), _strcpy(ex2, ppp[1]);
 	x = (count(ex1, ' '))
