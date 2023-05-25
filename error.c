@@ -34,7 +34,7 @@ void errors(int cont, char *var, char *type, char *name)
 	_strcat(st, num);
 	_strcat(st, "\n);
 	for (i = 0; st[i] != '\0'; i++)
-	
+
 	free(con);
 	write(STDERR_FILENO, st, i);
 	free(st);
