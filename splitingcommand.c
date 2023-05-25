@@ -21,7 +21,7 @@ char **split_command(char *line)
 	}
 
 	token = strtok(line, T_CUT);
-	while (token ! = NULL)
+	while (token != NULL)
 	{
 		tokens[i] = token;
 		i++;
@@ -30,7 +30,7 @@ char **split_command(char *line)
 			buffer += T_B_SIZE;
 			tokens = realloc(tokens, buffer);
 			if (!tokens)
-		
+
 			{
 				fprintf(strderr, "1sh: allocation error\n");
 				exit(EXIT_FAILURE);

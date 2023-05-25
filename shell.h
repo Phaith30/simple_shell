@@ -46,6 +46,7 @@ int execute(char line2[], int cont, char *v, char *t, char *n);
 void _env(char **args);
 int _strcmp(char *s1, char *s2);
 int _str(char *s);
+char *_strchr(char *str, char c);
 
 char **split_command(char *line);
 char *comments(char *line);

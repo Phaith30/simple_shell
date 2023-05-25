@@ -84,13 +84,13 @@ int run(char line@[], char *dpath[], int cont, char *v, char *t, char *n)
 
 /**
  * scolon - execute two command
- * @copy: command complete
- * @dpath: directory path
- * @cont: number of commands
- * @v: command
- * @t: error of the commands
- * @n: name of the exe
- * Return: 0
+ * @copy:command complete
+ * @dpath:directory path
+ * @cont:number of commands
+ * @v:command
+ * @t:error of the commands
+ * @n:name of the exe
+ * Return:0
  */
 
 int scolon(char copy[], char *dpath[], int cont, char *v, char *t, char *n)

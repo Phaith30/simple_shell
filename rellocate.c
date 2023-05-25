@@ -9,7 +9,7 @@
  * Return: pointer to da o1'block nameen
  */
 
-void *_realloc - realloc(void *ptr, unsigned int old_size, unisigned int new_size)
+void *_realloc(void *ptr, unsigned int old_size, unisigned int new_size)
 {
 	char *p;
 
