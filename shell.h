@@ -47,6 +47,8 @@ void _env(char **args);
 int _strcmp(char *s1, char *s2);
 int _str(char *s);
 char *_strchr(char *str, char c);
+void sigintHandler(__attribute__((unused))int sig_num);
+ssize_t input_buf(info_t *info, char **buf, size_t *len);
 
 char **split_command(char *line);
 char *comments(char *line);
